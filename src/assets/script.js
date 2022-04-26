@@ -10,9 +10,15 @@ const abc = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q'
 let keyAction = [];
 
 //HTML generator
-for(let i = 0; i < abc.length; i++) {
+for(let i of abc) {
     let list = document.getElementById('key--list')
-    list.innerHTML += "<li class='keys'><span class='keys--letter'>" +abc[i]+ "</span><input class='keys--type' id='" +abc[i]+ "-type' list='Options' placeholder='action'><input class='keys--url' id='" +abc[i]+ "-url' type='url' placeholder='audio url'><button class='keys--button' id='" +abc[i]+ "-test'>Test</button></li>";
+    list.innerHTML += 
+        `<li class='keys'>
+            <span class='keys--letter'>${i}</span>
+            <input class='keys--type' list='Options' placeholder='action'>
+            <input class='keys--url' type='url' placeholder='audio url'>
+            <button class='keys--button' onclick='console.log($(this).parent())'>Test</button>
+        </li>`;
 
     //A example
     document.getElementById('a-type').setAttribute('value', 'audio');
@@ -83,34 +89,34 @@ document.addEventListener('keypress', kP => {
 })
 
 //test button event listener (Si alguien lee esto, lo sé, es un horror, pero no sé cómo hacerlo sino XD)
-{
-    document.getElementById('a-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('b-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('c-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('d-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('e-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('f-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('g-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('h-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('i-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('j-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('k-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('l-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('m-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('n-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('o-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('p-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('q-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('r-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('s-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('t-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('u-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('v-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('w-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('x-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('y-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-    document.getElementById('z-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
-}
+// {
+//     document.getElementById('a-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('b-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('c-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('d-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('e-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('f-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('g-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('h-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('i-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('j-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('k-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('l-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('m-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('n-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('o-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('p-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('q-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('r-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('s-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('t-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('u-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('v-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('w-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('x-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('y-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+//     document.getElementById('z-test').addEventListener('click', kB => {let kI = kB.path[0].id[0]; actions(kI)});
+// }
 
 //export
 document.getElementById('export').addEventListener('click', downloadObjectAsJson);

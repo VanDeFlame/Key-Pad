@@ -1,0 +1,51 @@
+@import '@styles/_vars.scss';
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  border-bottom: 4px dashed $color-six;
+  background-color: $color-five;
+}
+
+.header--button {
+  height: 45px;
+  min-width: 175px;
+  padding: 0 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border-width: 4px;
+  border-style: solid;
+  border-bottom-color: $color-two;
+  border-right-color: $color-two;
+  border-top-color: $color-one;
+  border-left-color: $color-one;
+  color: $color-one;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  background-color: white;
+}
+
+.header--button:hover {
+  border-bottom-color: $color-one;
+  border-right-color: $color-one;
+  border-top-color: $color-two;
+  border-left-color: $color-two;
+  color: $color-two;
+}
+
+.header label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header--button.active {
+  background-color: $color-zero;
+  border-bottom-color: $color-one;
+  border-right-color: $color-one;
+  border-top-color: $color-two;
+  border-left-color: $color-two;
+  color: $color-two;
+}

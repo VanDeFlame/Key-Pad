@@ -1,0 +1,10 @@
+@import '@styles/_vars.scss';
+
+.key--list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center ;
+  max-width: 1500px;
+  margin: 10px auto;
+  font-size: 1.6rem;
+}
